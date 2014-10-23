@@ -3,25 +3,34 @@
 
 struct ReplaceUnderscoreWithSpace
 {
-char metin[100];
+char metin[1000];
 }UnderScore;
 
 int main(void)
 {
 	
-    printf("Metni giriniz: " );
-    scanf("%s" , UnderScore.metin);
-    printf("\n\n");
+    
+    scanf( "%s" , UnderScore.metin );
+    printf( "\n\n" );
     int i;
-    int boyut =strlen(UnderScore.metin);
+    int first = 0;
+    int last = strlen(UnderScore.metin)-1;
+    
+    while( UnderScore.metin[first] == '_' ){
+    	first++;
+    }
+    
+    while( UnderScore.metin[last] == '_' ){
+    	last--;
+    }
      
-    for(i=1 ; i < boyut-1 ; i++)
+    for( i=first ; i < last ; i++ )
     {
         
-        if(UnderScore.metin[i] == '_')
+        if( UnderScore.metin[i] == '_' )
             UnderScore.metin[i] = ' '; 
        
     }  
-    printf("Yeni metin: %s" , UnderScore.metin); 
+    printf( " %s" , UnderScore.metin ); 
 	return 0;     
 }
