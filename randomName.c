@@ -23,7 +23,7 @@ int main(void){
 	char *adjectives[100] = {"good","beatiful","long","small","nice",
 			"micke","bad","slow","green","blue","hard"};
 			
-	gets("%s", RandomName.language);
+	scanf("%s", RandomName.language);
 	
 	
 	
