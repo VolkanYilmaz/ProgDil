@@ -1,36 +1,28 @@
 #include <stdio.h>
 #include <string.h>
 
-struct ReplaceUnderscoreWithSpace
-{
-char metin[1000];
-}UnderScore;
-
-int main(void)
-{
-	
-    
-    scanf( "%s" , UnderScore.metin );
-    printf( "\n\n" );
+int main(int argc, char* argv[])
+{	
     int i;
     int first = 0;
-    int last = strlen(UnderScore.metin)-1;
+    char *p = argv[1];
+    int last = strlen(p)-1;
     
-    while( UnderScore.metin[first] == '_' ){
+    while( p[first] == '_')
+	{
     	first++;
     }
     
-    while( UnderScore.metin[last] == '_' ){
+    while( p[last] == '_')
+	{
     	last--;
     }
      
-    for( i=first ; i < last ; i++ )
-    {
-        
-        if( UnderScore.metin[i] == '_' )
-            UnderScore.metin[i] = ' '; 
-       
+    for(i=first; i<last; i++)
+    {  
+        if( p[i] == '_' )
+            p[i] = ' ';    
     }  
-    printf( " %s" , UnderScore.metin ); 
+    printf( " %s \n" , p); 
 	return 0;     
 }
