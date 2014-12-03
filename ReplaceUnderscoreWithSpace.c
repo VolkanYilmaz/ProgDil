@@ -9,12 +9,12 @@ int main(int argc, char* argv[])
     int last = strlen(p)-1;
     
     while( p[first] == '_')
-	{
+    {
     	first++;
     }
     
     while( p[last] == '_')
-	{
+    {
     	last--;
     }
      
