@@ -5,24 +5,24 @@ int main(int argc, char* argv[])
 {	
     int i;
     int first = 0;
-    char *p = argv[1];
-    int last = strlen(p)-1;
+    char *text = argv[1];
+    int last = strlen(text)-1;
     
-    while( p[first] == '_')
-    {
+    while( text[first] == '_')
+	{
     	first++;
     }
     
-    while( p[last] == '_')
-    {
+    while( text[last] == '_')
+	{
     	last--;
     }
      
     for(i=first; i<last; i++)
     {  
-        if( p[i] == '_' )
-            p[i] = ' ';    
+        if( text[i] == '_' )
+            text[i] = ' ';    
     }  
-    printf( " %s \n" , p); 
+    printf( " %s \n" , text); 
 	return 0;     
 }
