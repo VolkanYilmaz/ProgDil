@@ -12,7 +12,7 @@ int main(int argc, char *argv[]){
 	int i;                   //sayaç göevindeki değişken
 	srand(time(NULL));		 //rasgele fonksiyonunu tamamlayan kod.
 	
-	char *adj[ROW][COLUMN]={
+	const char *adj[ROW][COLUMN]={
 		{"iyi",
 		"kötü",
 		"güzel",
@@ -45,7 +45,7 @@ int main(int argc, char *argv[]){
 		"shiny"}
 	};
 
-	char *noun[ROW][COLUMN]={
+	const char *noun[ROW][COLUMN]={
 		{"insan",
 		"aslan",
 		"saat",
@@ -80,10 +80,10 @@ int main(int argc, char *argv[]){
 	
 	Parameter parameters;
 	Parameter *pt=&parameters;
-    makeParameter(pt,argc,argv);
+    	makeParameter(pt,argc,argv);
 	   
 	char ad[100],name[25];
-    if(parameters.err){
+    	if(parameters.err){
 		error();
 		return 0;
 	}
