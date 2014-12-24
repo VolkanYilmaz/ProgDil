@@ -1,13 +1,13 @@
-//KÃ¼tÃ¼phaneleri Ã§aÄŸrÄ±sÄ±
+//Kütüphaneler alındı
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 
-//Bool veri tÃ¼rÃ¼nÃ¼n gerÃ§eklenmesi
+//Bool veri türünün gerçeklenmesi
 typedef enum{false,true} bool;
 
-//Parametre yapÄ±sÄ±nÄ±n gerÃ§eklenmesi. Bu yapÄ± fonksiyon parametrelerini (dil, tekrar ve hata) tutuyor.
+//Parametre yapısının gerçeklenmesi. Bu yapı fonksiyon parametrelerini (dil, tekrar ve hata) tutuyor.
 typedef struct Parameter{
 	int lang;    
 	int repeat;
@@ -17,7 +17,7 @@ typedef struct Parameter{
 //clear metodunun prototipi
 void clear();
 
-//Main metoddaki parametre yapÄ±sÄ±nÄ±n deÄŸiÅŸkenlerine deÄŸer atamak iÃ§in kullandÄ±ÄŸÄ±mÄ±z metod.
+//Main metoddaki parametre yapısındaki değişkenlere değer atamak için kullanılacak metod.
 void makeParameter(Parameter *pt,int n,char **str){
 	pt->lang=0;
 	pt->repeat=1;
@@ -50,7 +50,7 @@ void makeParameter(Parameter *pt,int n,char **str){
 
 }
 
-//ÃœrettiÄŸimiz ismin daha Ã¶nce Ã¼retilip Ã¼retilmediÄŸini kontrol eden metod
+//Ürettiğimiz ismin daha önce üretilip üretilmediğini kontrol eden metod
 bool control(char *name){
 	FILE *fr,*fw;
 	fr=fopen("Names","r");
@@ -70,14 +70,14 @@ bool control(char *name){
 	return result;
 }
 
-//Ä°simlerin arÅŸivlendiÄŸi dosyayÄ± temizleyen metod
+//İsimlerin arşivlendiği dosyayı temizleyen metod
 void clear(){
 	FILE *fp;
 	fp=fopen("Names","w");
 	fclose(fp);
 }
 
-//Komut satÄ±rÄ±nda yanlÄ±ÅŸ girdi durumunda uyaran ve programÄ± sonlandÄ±ran metod.
+//Komut satırında yanlış girdi durumunda uyaran ve programı sonlandıran metod.
 void error(){
-	printf("%s","HatalÄ± fonksiyon Ã§aÄŸrÄ±sÄ±. Program sonlandÄ±rÄ±lÄ±yor.");
+	printf("%s","Hatalı fonksiyon girdisi. Program sonlandırılıyor.");
 }
