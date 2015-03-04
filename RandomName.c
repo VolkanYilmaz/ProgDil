@@ -13,7 +13,8 @@ int main(int argc, char *argv[]){
 	srand(time(NULL));		 //rasgele fonksiyonunu tamamlayan kod.
 	
 	const char *adj[ROW][COLUMN]={
-		{"iyi",
+		{"sevimli",
+		"iyi",
 		"kötü",
 		"güzel",
 		"çirkin",
